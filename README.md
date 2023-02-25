@@ -115,45 +115,44 @@ aika@aika-virtual-machine:$ sudo apt-get install kmod linux-headers-5.4.0-80-gen
 aika@aika-virtual-machine: $ mkdir -p ~/develop/kernel/calculator-2\
 
 4) Then we upload the C code with the calculator there:\
+
 #include <linux/init.h>\
 #include <linux/module.h>\
 #include <linux/kernel.h>\
+int calculator_init(void) {
 
-int calculator_init(void) {\
-    printk(KERN_INFO "Calculator module loaded\n");\
+    printk(KERN_INFO "Calculator module loaded\n");
+    char op;
+    int num1, num2;
 
-    char op;\
-    int num1, num2;\
-
-    // Read operator and operands from user\
-    printk(KERN_INFO "Enter operator (+,-,*,/): ");\
-    scanf("%c", &op);\
-
-    printk(KERN_INFO "Enter two operands: ");\
-    scanf("%d %d", &num1, &num2);\
-    // Perform the operation\
-    switch(op) {\
-        case '+':\
-            printk(KERN_INFO "%d + %d = %d\n", num1, num2, num1 + num2);\
-            break;\
-        case '-':\
-            printk(KERN_INFO "%d - %d = %d\n", num1, num2, num1 - num2);\
-            break;\
-        case '*':\
-            printk(KERN_INFO "%d * %d = %d\n", num1, num2, num1 * num2);\
-            break;\
-        case '/':\
-            if(num2 == 0) {\
-                printk(KERN_ERR "Error: Division by zero\n");\
-            } else {\
-                printk(KERN_INFO "%d / %d = %d\n", num1, num2, num1 / num2);\
-            }\
-            break;\
-        default:\
-            printk(KERN_ERR "Error: Invalid operator\n");\
-            break;\
-    }\
-    return 0;\
+    // Read operator and operands from user
+    printk(KERN_INFO "Enter operator (+,-,*,/): ");
+    scanf("%c", &op);
+    printk(KERN_INFO "Enter two operands: ");
+    scanf("%d %d", &num1, &num2);
+    // Perform the operation
+    switch(op) {
+        case '+':
+            printk(KERN_INFO "%d + %d = %d\n", num1, num2, num1 + num2);
+            break;
+        case '-':
+            printk(KERN_INFO "%d - %d = %d\n", num1, num2, num1 - num2);
+            break;
+        case '*':
+            printk(KERN_INFO "%d * %d = %d\n", num1, num2, num1 * num2);
+            break;
+        case '/':
+            if(num2 == 0) {
+                printk(KERN_ERR "Error: Division by zero\n");
+            } else {
+                printk(KERN_INFO "%d / %d = %d\n", num1, num2, num1 / num2);
+            }
+            break;
+        default:
+            printk(KERN_ERR "Error: Invalid operator\n");
+            break;
+    }
+    return 0;
 }\
 
 void calculator_exit(void) {\
