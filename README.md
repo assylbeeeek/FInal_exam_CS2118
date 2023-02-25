@@ -98,7 +98,7 @@ PING google.com (142.250.74.46) 50(84) bytes of data.\
 64 bytes from arn09s22-in-f14.1e100.net (142.250.74.46): icmp_seq=4 ttl=56 time=179ms\
 Overall, people use proxy servers because it offers several benefits, such as: security, privacy and access to restricted content.
 ## Task 3 codes
-1) Linux distributions have modprobe, insmod and depmod commands for working with module packages. Loading them with:\
+1) Loading modprobe, insmod and depmod distributions for working with module packages with:\
 aika@aika-virtual-machine:$ sudo apt-get install build-essential kmod\
 Сheck which modules are loaded into the kernel via:\
 aika@aika-virtual-machine:$ sudo lsmod\
@@ -115,12 +115,11 @@ aika@aika-virtual-machine:$ sudo apt-get install kmod linux-headers-5.4.0-80-gen
 aika@aika-virtual-machine: $ mkdir -p ~/develop/kernel/calculator-2\
 
 4) Then we upload the C code with the calculator there:\
-
-#include <linux/init.h>\
-#include <linux/module.h>\
-#include <linux/kernel.h>\
+```
+#include <linux/init.h>
+#include <linux/module.h>
+#include <linux/kernel.h>
 int calculator_init(void) {
-
     printk(KERN_INFO "Calculator module loaded\n");
     char op;
     int num1, num2;
@@ -153,17 +152,16 @@ int calculator_init(void) {
             break;
     }
     return 0;
-}\
-
-void calculator_exit(void) {\
-    printk(KERN_INFO "Calculator module unloaded\n");\
-}\
-module_init(calculator_init);\
-module_exit(calculator_exit);\
-MODULE_LICENSE("GPL");\
-MODULE_AUTHOR("Your name");\
-MODULE_DESCRIPTION("A simple calculator kernel module");\
-
+}
+void calculator_exit(void) {
+    printk(KERN_INFO "Calculator module unloaded\n");
+}
+module_init(calculator_init);
+module_exit(calculator_exit);
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Your name");
+MODULE_DESCRIPTION("A simple calculator kernel module");
+```
 5) Next we create a Makefile with text editor nano\
 aika@aika-virtual-machine: $ cd ~/develop/kernel/calculator-2\
 aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ nano Makefile\
