@@ -109,8 +109,9 @@ sudo apt-get update \
 apt-cache search linux-headers-`uname -r` \
 After that we download the latest version of the kernel:\
 sudo apt-get install kmod linux-headers-5.4.0-80-generic\
-We create a text catalog nano calculator-2\
-Then we upload the code with the calculator there:\
+We create a text catalog calculator-2.ko with mkdir command\
+aika@aika-virtual-machine: $ mkdir -p ~/develop/kernel/calculator-2\
+Then we upload the C code with the calculator there:\
 #include <linux/init.h>\
 #include <linux/module.h>\
 #include <linux/kernel.h>\
@@ -160,6 +161,12 @@ module_exit(calculator_exit);\
 MODULE_LICENSE("GPL");\
 MODULE_AUTHOR("Your name");\
 MODULE_DESCRIPTION("A simple calculator kernel module");\
-Next we create a Makefile\
+Next we create with text editor nano a Makefile\
+aika@aika-virtual-machine: $ cd ~/develop/kernel/calculator-2\
+aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ nano Makefile\
 At the end, we execute the make command\
-Next we run our sudo insmod calculator-2.ko file and test it\
+aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ make\
+Next we run our sudo insmod calculator-2.ko file and test it with simple calculation\
+aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ sudo insmod calculator-2.ko\
+aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ 23 - 13\
+10
