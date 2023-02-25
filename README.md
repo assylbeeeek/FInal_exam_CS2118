@@ -2,16 +2,16 @@
 This repository provides the written code in with which we have completed all 3 tasks by Aiken, Sofiya, Adina, Irina, Assylbek.
 # Task 1 codes
 assylbek@assylbek-VirtualBox:$ sudo useradd new_user
-[sudo] password for assylbek: 
-assylbek@assylbek-VirtualBox:$ sudo -i
-root@assylbek-VirtualBox:# useradd student
-root@assylbek-VirtualBox:# passwd student
-New password: 
-BAD PASSWORD: The password is shorter than 8 characters
-Retype new password: 
-passwd: password updated successfully
-root@assylbek-VirtualBox:# login student
-Password: 
+  [sudo] password for assylbek: 
+  assylbek@assylbek-VirtualBox:$ sudo -i
+  root@assylbek-VirtualBox:# useradd student
+  root@assylbek-VirtualBox:# passwd student
+  New password: 
+  BAD PASSWORD: The password is shorter than 8 characters
+  Retype new password: 
+  passwd: password updated successfully
+  root@assylbek-VirtualBox:# login student
+  Password: 
 Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-58-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -41,5 +41,5 @@ individual files in /usr/share/doc/*/copyright.
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.                                                                                                                             
 No directory, logging in with HOME=/
-$ whoami
-student
+  $ whoami
+  student
