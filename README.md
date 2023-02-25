@@ -107,10 +107,10 @@ aika@aika-virtual-machine:$ sudo cat /proc/modules \
 Through these commands we check the available cores:\
 aika@aika-virtual-machine:$ sudo apt-get update \
 aika@aika-virtual-machine:$ apt-cache search linux-headers-`uname -r` \
-\
+
 2) After that we download the latest version of the kernel:\
 aika@aika-virtual-machine:$ sudo apt-get install kmod linux-headers-5.4.0-80-generic\
-\
+
 3) We create a text catalog calculator-2.ko with mkdir command\
 aika@aika-virtual-machine: $ mkdir -p ~/develop/kernel/calculator-2\
 
@@ -118,17 +118,17 @@ aika@aika-virtual-machine: $ mkdir -p ~/develop/kernel/calculator-2\
 #include <linux/init.h>\
 #include <linux/module.h>\
 #include <linux/kernel.h>\
-\
+
 int calculator_init(void) {\
     printk(KERN_INFO "Calculator module loaded\n");\
-\
+
     char op;\
     int num1, num2;\
-\
+
     // Read operator and operands from user\
     printk(KERN_INFO "Enter operator (+,-,*,/): ");\
     scanf("%c", &op);\
-\
+
     printk(KERN_INFO "Enter two operands: ");\
     scanf("%d %d", &num1, &num2);\
     // Perform the operation\
@@ -155,7 +155,7 @@ int calculator_init(void) {\
     }\
     return 0;\
 }\
-\
+
 void calculator_exit(void) {\
     printk(KERN_INFO "Calculator module unloaded\n");\
 }\
@@ -164,14 +164,14 @@ module_exit(calculator_exit);\
 MODULE_LICENSE("GPL");\
 MODULE_AUTHOR("Your name");\
 MODULE_DESCRIPTION("A simple calculator kernel module");\
-\
+
 5) Next we create a Makefile with text editor nano\
 aika@aika-virtual-machine: $ cd ~/develop/kernel/calculator-2\
 aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ nano Makefile\
-\
+
 6) At the end, we execute the make command\
 aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ make\
-\
+
 7) Next we run our sudo insmod calculator-2.ko file and test it with simple calculation\
 aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ sudo insmod calculator-2.ko\
 aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ 23 - 13\
