@@ -1,6 +1,6 @@
 # Final_exam_CS2118
 This repository provides the written code in with which we have completed all 3 tasks by Aiken, Sofiya, Adina, Irina, Assylbek.
-(The code from linux terminal has this sign: ~, that making strikethrough text in github, so we deleted this signs here. Unfortunately, some of the written codes have not been saved.)\
+(The code from linux terminal has this signs: ~, #, these making strikethrough and marked up text in github, so we removed these signs here in some places. Unfortunately, some of the written codes have not been saved.)\
 # Task 1 codes
 assylbek@assylbek-VirtualBox:$ sudo useradd new_user\
 [sudo] password for assylbek: \
@@ -66,17 +66,17 @@ Deleted and flashed, also deleted all chains (that are not included to default f
 Set up IP forwarding and masquerading.\
 Enabled packet forwarding & applied the configuration.\
 In the /etc/systl.conf *\
-# /etc/sysctl.conf - Configuration ftle for setting system vartables\
-# See /etc/sysctl.d/ for additional system vartables.\
-# See sysctl.conf (5) for information.\
+/etc/sysctl.conf - Configuration ftle for setting system vartables\
+ See /etc/sysctl.d/ for additional system vartables.\
+ See sysctl.conf (5) for information.\
 #kernel.domainname = example.com\
-# Uncomment the following to stop low-level messages on console\
-#kernel.printk = 3 4 1 3\
+ Uncomment the following to stop low-level messages on console\
+kernel.printk = 3 4 1 3\
 #######＃############＃＃＃＃＃##＃#＃###########＃#######＃###＃#＃#＃＃＃＃＃＃丼＃#＃\
-# Functions previously found in netbase\
-# Uncomment the next two lines to enable spoof protection (reverse-path filter)\
-# Turn on Source Address Verification in all interfaces to\
-# prevent some spoofing attacks\
+ Functions previously found in netbase\
+ Uncomment the next two lines to enable spoof protection (reverse-path filter)\
+ Turn on Source Address Verification in all interfaces to\
+ prevent some spoofing attacks\
 #net.tpv4.conf.default.rp_ filter=1\
 #net.tpv4.conf.all.rp_filter=1\
 In the /etc/networks/interfaces\
