@@ -101,6 +101,67 @@ PING google.com (142.250.74.46) 50(84) bytes of data.\
 64 bytes from arn09s22-in-f14.1e100.net (142.250.74.46): icmp_seq=4 ttl=56 time=179ms\
 Overall, people use proxy servers because it offers several benefits, such as: security, privacy and access to restricted content.
 # Task 3 codes
-Linux distributions have modprobe, insmod and depmod commands for working with module packages.
-In Ubuntu/Debian:
-sudo apt-get install build-essential kmod
+Linux distributions have modprobe, insmod and depmod commands for working with module packages. Loading them with:\
+sudo apt-get install build-essential kmod\
+Сheck which modules are loaded into the kernel via:\
+sudo lsmod\
+Prescribed the path to the modules:\
+sudo cat /proc/modules \
+Through these commands we check the available cores:\
+sudo apt-get update \
+apt-cache search linux-headers-`uname -r` \
+After that we download the latest version of the kernel:\
+sudo apt-get install kmod linux-headers-5.4.0-80-generic\
+We create a text catalog nano calculator-2\
+Then we upload the code with the calculator there:\
+#include <linux/init.h>\
+#include <linux/module.h>\
+#include <linux/kernel.h>\
+\
+int calculator_init(void) {\
+    printk(KERN_INFO "Calculator module loaded\n");\
+\
+    char op;\
+    int num1, num2;\
+\
+    // Read operator and operands from user\
+    printk(KERN_INFO "Enter operator (+,-,*,/): ");\
+    scanf("%c", &op);\
+\
+    printk(KERN_INFO "Enter two operands: ");\
+    scanf("%d %d", &num1, &num2);\
+    // Perform the operation\
+    switch(op) {\
+        case '+':\
+            printk(KERN_INFO "%d + %d = %d\n", num1, num2, num1 + num2);\
+            break;\
+        case '-':\
+            printk(KERN_INFO "%d - %d = %d\n", num1, num2, num1 - num2);\
+            break;\
+        case '*':\
+            printk(KERN_INFO "%d * %d = %d\n", num1, num2, num1 * num2);\
+            break;\
+        case '/':\
+            if(num2 == 0) {\
+                printk(KERN_ERR "Error: Division by zero\n");\
+            } else {\
+                printk(KERN_INFO "%d / %d = %d\n", num1, num2, num1 / num2);\
+            }\
+            break;\
+        default:\
+            printk(KERN_ERR "Error: Invalid operator\n");\
+            break;\
+    }\
+    return 0;\
+}\
+\
+void calculator_exit(void) {\
+    printk(KERN_INFO "Calculator module unloaded\n");\
+}\
+module_init(calculator_init);\
+module_exit(calculator_exit);\
+MODULE_LICENSE("GPL");\
+MODULE_AUTHOR("Your name");\
+MODULE_DESCRIPTION("A simple calculator kernel module");\
+
+Next we create a Makefile
