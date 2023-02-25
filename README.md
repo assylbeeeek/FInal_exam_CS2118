@@ -1,6 +1,6 @@
 # Final_exam_CS2118
 This repository provides the written code in with which we have completed all 3 tasks by Aiken, Sofiya, Adina, Irina, Assylbek. With some explanations, more in report file.
-(The code from linux terminal has this signs: ~, #, these making strikethrough and marked up text in github, so we removed these signs here in some places. Unfortunately, some of the written codes have not been saved.)\
+(The code from linux terminal has this signs: ~, #, these making strikethrough and marked up text in github, so we removed these signs here in some places. Unfortunately, some of the written codes have not been saved.)
 ## Task 1 codes
 assylbek@assylbek-VirtualBox:$ sudo useradd new_user\
 [sudo] password for assylbek: \
