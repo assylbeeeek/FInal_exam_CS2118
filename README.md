@@ -2,6 +2,7 @@
 This repository provides the written code in with which we have completed all 3 tasks by Aiken, Sofiya, Adina, Irina, Assylbek. With some explanations, more in report file.
 (The code from linux terminal has this signs: ~, #, these making strikethrough and marked up text in github, so we removed these signs here in some places. Unfortunately, some of the written codes have not been saved.)\
 ## Task 1 codes
+***
 assylbek@assylbek-VirtualBox:$ sudo useradd new_user\
 [sudo] password for assylbek: \
 assylbek@assylbek-VirtualBox:$ sudo -i\
@@ -44,9 +45,10 @@ applicable law.
 No directory, logging in with HOME=/\
 $ whoami\
 student\
-
+***
 To check the result in etc/passwd file\
-assylbek@assylbek-VirtualBox:/etc$ open passwd
+***
+assylbek@assylbek-VirtualBox:/etc$ open passwd***
 ## Task 2 codes
 **1. "Direct" IP connection**\
 In the manual configuration mode of the IPv4 in wired connection entered this settings:\
@@ -57,7 +59,7 @@ DNS: 162.168.1.1 (IPv4 address of my home router)\
 Checked results in settins and in terminal by typing commands:\
 sonya@sonya:$ ip addr \
 sonya@sonya:$ ping google.com (this test checks the speed and stability of the entered internet connection)\
-2.	Connection via NAT.\
+**2.	Connection via NAT.**\
 a) To connect via NAT, I used Iptables & to do it I had to get root access.\
 b) First of all, I verified my connection, then configured eth0 with an IP external network and configured eth1 for LAN with an internal private network.\
 a)	Gateway, DNS configuration.\
@@ -83,7 +85,7 @@ In the /etc/networks/interfaces\
 pre-up iptables-restore < /etc/iptables.up.rules\
 up route add -net 192.168.0.0 netmask 255.255.255.0 dev eth1\
 up route add -net 0.0.0.0 netmask 255.255.255.255 dev eth0\
-3.	Connectian via a Proxy server.\
+**3.	Connectian via a Proxy server.**\
 For this type of connection method, I used information from special sites that give out up-to-date proxy servers, to do this work I used a Singapore server. 
 *I connected everything manually.\
 a) I went straight into Wired Connected -> Wired Settings -> Wired and clicked on the  Network Proxy button (by that I turned on whole system of proxy, because it was previously disabled).\
