@@ -47,7 +47,7 @@ student\
 
 to check the result in etc/passwd file\
 assylbek@assylbek-VirtualBox:/etc$ open passwd
-# Task 2 code
+# Task 2 codes
 1. "Direct" IP connection\
 In the manual configuration mode of the IPv4 in wired connection entered this settings:\
 Address: 10.0.2.15\
@@ -83,3 +83,21 @@ In the /etc/networks/interfaces\
 pre-up iptables-restore < /etc/iptables.up.rules\
 up route add -net 192.168.0.0 netmask 255.255.255.0 dev eth1\
 up route add -net 0.0.0.0 netmask 255.255.255.255 dev eth0\
+3.	Connectian via a Proxy server.\
+For this type of connection method, I used information from special sites that give out up-to-date proxy servers, to do this work I used a Singapore server. 
+*I connected everything manually.\
+a) I went straight into Wired Connected -> Wired Settings -> Wired and clicked on the  Network Proxy button (by that I turned on whole system of proxy, because it was previously disabled).\
+b) Then, I entered all essential data:\
+HTTP Proxy: 180.210.206.52\
+HTTPS Proxy: 180.210.206.52\
+FTP Proxy: 180.210.206.52\
+Port, that I’ve entered everywhere: 3128\
+c) Then, I used terminal to check the quality of the network connection.\
+sonya@sonya:$ ping google.com\
+PING google.com (142.250.74.46) 50(84) bytes of data.\
+64 bytes from arn09s22-in-f14.1e100.net (142.250.74.46): icmp_seq=1 ttl=56 time=160ms\
+64 bytes from arn09s22-in-f14.1e100.net (142.250.74.46): icmp_seq=2 ttl=56 time=132ms\
+64 bytes from arn09s22-in-f14.1e100.net (142.250.74.46): icmp_seq=3 ttl=56 time=164ms\
+64 bytes from arn09s22-in-f14.1e100.net (142.250.74.46): icmp_seq=4 ttl=56 time=179ms\
+Overall, people use proxy servers because it offers several benefits, such as: security, privacy and access to restricted content.
+# Task 3 codes
