@@ -106,7 +106,7 @@ Prescribed the path to the modules:\
 aika@aika-virtual-machine:$ sudo cat /proc/modules \
 Through these commands we check the available cores:\
 aika@aika-virtual-machine:$ sudo apt-get update \
-aika@aika-virtual-machine:$ apt-cache search linux-headers-`uname -r` \
+aika@aika-virtual-machine:$ apt-cache search linux-headers-`uname -r` 
 
 2) After that we download the latest version of the kernel:\
 aika@aika-virtual-machine:$ sudo apt-get install kmod linux-headers-5.4.0-80-generic
@@ -164,10 +164,10 @@ MODULE_DESCRIPTION("A simple calculator kernel module");
 ```
 5) Next we create a Makefile with text editor nano\
 aika@aika-virtual-machine: $ cd ~/develop/kernel/calculator-2\
-aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ nano Makefile\
+aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ nano Makefile
 
 6) At the end, we execute the make command\
-aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ make\
+aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ make
 
 7) Next we run our sudo insmod calculator-2.ko file and test it with simple calculation\
 aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ sudo insmod calculator-2.ko\
