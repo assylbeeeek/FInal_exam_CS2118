@@ -45,5 +45,5 @@ $ whoami\
 student\
 
 to check the result in etc/passwd file\
-assylbek@assylbek-VirtualBox:/etc$ open passwd\
+assylbek@assylbek-VirtualBox:/etc$ open passwd
 # Task 2 code
