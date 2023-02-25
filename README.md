@@ -99,16 +99,16 @@ PING google.com (142.250.74.46) 50(84) bytes of data.\
 Overall, people use proxy servers because it offers several benefits, such as: security, privacy and access to restricted content.
 ## Task 3 codes
 Linux distributions have modprobe, insmod and depmod commands for working with module packages. Loading them with:\
-sudo apt-get install build-essential kmod\
+aika@aika-virtual-machine:$ sudo apt-get install build-essential kmod\
 Сheck which modules are loaded into the kernel via:\
-sudo lsmod\
+aika@aika-virtual-machine:$ sudo lsmod\
 Prescribed the path to the modules:\
-sudo cat /proc/modules \
+aika@aika-virtual-machine:$ sudo cat /proc/modules \
 Through these commands we check the available cores:\
-sudo apt-get update \
-apt-cache search linux-headers-`uname -r` \
+aika@aika-virtual-machine:$ sudo apt-get update \
+aika@aika-virtual-machine:$ apt-cache search linux-headers-`uname -r` \
 After that we download the latest version of the kernel:\
-sudo apt-get install kmod linux-headers-5.4.0-80-generic\
+aika@aika-virtual-machine:$ sudo apt-get install kmod linux-headers-5.4.0-80-generic\
 We create a text catalog calculator-2.ko with mkdir command\
 aika@aika-virtual-machine: $ mkdir -p ~/develop/kernel/calculator-2\
 Then we upload the C code with the calculator there:\
