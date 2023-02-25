@@ -43,6 +43,7 @@ applicable law.
 No directory, logging in with HOME=/\
 $ whoami\
 student\
-<!-- to check the result in etc/passwd file-->\ 
+
+to check the result in etc/passwd file\
 assylbek@assylbek-VirtualBox:/etc$ open passwd\
 # Task 2 code
