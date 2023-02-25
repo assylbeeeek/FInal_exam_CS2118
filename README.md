@@ -1,7 +1,7 @@
 # Final_exam_CS2118
 This repository provides the written code in with which we have completed all 3 tasks by Aiken, Sofiya, Adina, Irina, Assylbek. With some explanations, more in report file.
 (The code from linux terminal has this signs: ~, #, these making strikethrough and marked up text in github, so we removed these signs here in some places. Unfortunately, some of the written codes have not been saved.)\
-# Task 1 codes
+## Task 1 codes
 assylbek@assylbek-VirtualBox:$ sudo useradd new_user\
 [sudo] password for assylbek: \
 assylbek@assylbek-VirtualBox:$ sudo -i\
@@ -47,7 +47,7 @@ student\
 
 to check the result in etc/passwd file\
 assylbek@assylbek-VirtualBox:/etc$ open passwd
-# Task 2 codes
+## Task 2 codes
 1. "Direct" IP connection\
 In the manual configuration mode of the IPv4 in wired connection entered this settings:\
 Address: 10.0.2.15\
@@ -100,7 +100,7 @@ PING google.com (142.250.74.46) 50(84) bytes of data.\
 64 bytes from arn09s22-in-f14.1e100.net (142.250.74.46): icmp_seq=3 ttl=56 time=164ms\
 64 bytes from arn09s22-in-f14.1e100.net (142.250.74.46): icmp_seq=4 ttl=56 time=179ms\
 Overall, people use proxy servers because it offers several benefits, such as: security, privacy and access to restricted content.
-# Task 3 codes
+## Task 3 codes
 Linux distributions have modprobe, insmod and depmod commands for working with module packages. Loading them with:\
 sudo apt-get install build-essential kmod\
 Сheck which modules are loaded into the kernel via:\
@@ -163,5 +163,6 @@ module_exit(calculator_exit);\
 MODULE_LICENSE("GPL");\
 MODULE_AUTHOR("Your name");\
 MODULE_DESCRIPTION("A simple calculator kernel module");\
-
-Next we create a Makefile
+Next we create a Makefile\
+At the end, we execute the make command\
+Next we run our sudo insmod calculator-2.ko file and test it\
