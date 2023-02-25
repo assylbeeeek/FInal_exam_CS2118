@@ -98,7 +98,7 @@ PING google.com (142.250.74.46) 50(84) bytes of data.\
 64 bytes from arn09s22-in-f14.1e100.net (142.250.74.46): icmp_seq=4 ttl=56 time=179ms\
 Overall, people use proxy servers because it offers several benefits, such as: security, privacy and access to restricted content.
 ## Task 3 codes
-Linux distributions have modprobe, insmod and depmod commands for working with module packages. Loading them with:\
+1) Linux distributions have modprobe, insmod and depmod commands for working with module packages. Loading them with:\
 aika@aika-virtual-machine:$ sudo apt-get install build-essential kmod\
 Сheck which modules are loaded into the kernel via:\
 aika@aika-virtual-machine:$ sudo lsmod\
@@ -107,11 +107,14 @@ aika@aika-virtual-machine:$ sudo cat /proc/modules \
 Through these commands we check the available cores:\
 aika@aika-virtual-machine:$ sudo apt-get update \
 aika@aika-virtual-machine:$ apt-cache search linux-headers-`uname -r` \
-After that we download the latest version of the kernel:\
+\
+2) After that we download the latest version of the kernel:\
 aika@aika-virtual-machine:$ sudo apt-get install kmod linux-headers-5.4.0-80-generic\
-We create a text catalog calculator-2.ko with mkdir command\
+\
+3) We create a text catalog calculator-2.ko with mkdir command\
 aika@aika-virtual-machine: $ mkdir -p ~/develop/kernel/calculator-2\
-Then we upload the C code with the calculator there:\
+\
+4) Then we upload the C code with the calculator there:\
 #include <linux/init.h>\
 #include <linux/module.h>\
 #include <linux/kernel.h>\
@@ -161,12 +164,15 @@ module_exit(calculator_exit);\
 MODULE_LICENSE("GPL");\
 MODULE_AUTHOR("Your name");\
 MODULE_DESCRIPTION("A simple calculator kernel module");\
-Next we create with text editor nano a Makefile\
+\
+5) Next we create a Makefile with text editor nano\
 aika@aika-virtual-machine: $ cd ~/develop/kernel/calculator-2\
 aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ nano Makefile\
-At the end, we execute the make command\
+\
+6) At the end, we execute the make command\
 aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ make\
-Next we run our sudo insmod calculator-2.ko file and test it with simple calculation\
+\
+7) Next we run our sudo insmod calculator-2.ko file and test it with simple calculation\
 aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ sudo insmod calculator-2.ko\
 aika@aika-virtual-machine: ~/develop/kernel/calculator-2$ 23 - 13\
 10
