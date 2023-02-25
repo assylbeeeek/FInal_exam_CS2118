@@ -45,10 +45,10 @@ No directory, logging in with HOME=/\
 $ whoami\
 student\
 
-to check the result in etc/passwd file\
+To check the result in etc/passwd file\
 assylbek@assylbek-VirtualBox:/etc$ open passwd
 ## Task 2 codes
-1. "Direct" IP connection\
+**1. "Direct" IP connection**\
 In the manual configuration mode of the IPv4 in wired connection entered this settings:\
 Address: 10.0.2.15\
 Netmask: 255.255.255.0 \
