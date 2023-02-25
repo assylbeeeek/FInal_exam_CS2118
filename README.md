@@ -1,5 +1,5 @@
 # Final_exam_CS2118
-This repository provides the written code in with which we have completed all 3 tasks by Aiken, Sofiya, Adina, Irina, Assylbek.
+This repository provides the written code in with which we have completed all 3 tasks by Aiken, Sofiya, Adina, Irina, Assylbek. With some explanations, more in report file.
 (The code from linux terminal has this signs: ~, #, these making strikethrough and marked up text in github, so we removed these signs here in some places. Unfortunately, some of the written codes have not been saved.)\
 # Task 1 codes
 assylbek@assylbek-VirtualBox:$ sudo useradd new_user\
@@ -101,3 +101,6 @@ PING google.com (142.250.74.46) 50(84) bytes of data.\
 64 bytes from arn09s22-in-f14.1e100.net (142.250.74.46): icmp_seq=4 ttl=56 time=179ms\
 Overall, people use proxy servers because it offers several benefits, such as: security, privacy and access to restricted content.
 # Task 3 codes
+Linux distributions have modprobe, insmod and depmod commands for working with module packages.
+In Ubuntu/Debian:
+sudo apt-get install build-essential kmod
