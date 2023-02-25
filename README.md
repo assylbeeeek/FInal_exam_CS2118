@@ -1,5 +1,6 @@
 # Final_exam_CS2118
 This repository provides the written code in with which we have completed all 3 tasks by Aiken, Sofiya, Adina, Irina, Assylbek.
+(The code from linux terminal has this sign: ~, that making strikethrough text in github, so we deleted this signs here)\
 # Task 1 codes
 assylbek@assylbek-VirtualBox:$ sudo useradd new_user\
 [sudo] password for assylbek: \
@@ -47,3 +48,12 @@ student\
 to check the result in etc/passwd file\
 assylbek@assylbek-VirtualBox:/etc$ open passwd
 # Task 2 code
+1. "Direct" IP connection\
+In the manual configuration mode of the IPv4 in wired connection entered this settings:\
+Address: 10.0.2.15\
+Netmask: 255.255.255.0 \
+Gateway: 10.0.2.2\
+DNS: 162.168.1.1 (IPv4 address of my home router)\
+Checked results in settins and in terminal by typing commands:\
+sonya@sonya:$ ip addr \
+sonya@sonya:$ ping google.com (this test checks the speed and stability of the entered internet connection)
