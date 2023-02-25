@@ -109,12 +109,12 @@ aika@aika-virtual-machine:$ sudo apt-get update \
 aika@aika-virtual-machine:$ apt-cache search linux-headers-`uname -r` \
 
 2) After that we download the latest version of the kernel:\
-aika@aika-virtual-machine:$ sudo apt-get install kmod linux-headers-5.4.0-80-generic\
+aika@aika-virtual-machine:$ sudo apt-get install kmod linux-headers-5.4.0-80-generic
 
 3) We create a text catalog calculator-2.ko with mkdir command\
-aika@aika-virtual-machine: $ mkdir -p ~/develop/kernel/calculator-2\
+aika@aika-virtual-machine: $ mkdir -p ~/develop/kernel/calculator-2
 
-4) Then we upload the C code with the calculator there:\
+4) Then we upload the C code with the calculator there:
 ```
 #include <linux/init.h>
 #include <linux/module.h>
