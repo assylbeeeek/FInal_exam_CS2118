@@ -2,13 +2,13 @@
 This repository provides the written code in with which we have completed all 3 tasks by Aiken, Sofiya, Adina, Irina, Assylbek.
 # Task 1 codes
 assylbek@assylbek-VirtualBox:$ sudo useradd new_user
-  [sudo] password for assylbek: 
-  assylbek@assylbek-VirtualBox:$ sudo -i
-  root@assylbek-VirtualBox:# useradd student
-  root@assylbek-VirtualBox:# passwd student
-  New password: 
-  BAD PASSWORD: The password is shorter than 8 characters
-  Retype new password: 
+		[sudo] password for assylbek: 
+		assylbek@assylbek-VirtualBox:$ sudo -i
+		root@assylbek-VirtualBox:# useradd student
+		root@assylbek-VirtualBox:# passwd student
+		New password: 
+		BAD PASSWORD: The password is shorter than 8 characters
+		Retype new password: 
   passwd: password updated successfully
   root@assylbek-VirtualBox:# login student
   Password: 
