@@ -113,7 +113,7 @@ aika@aika-virtual-machine:$ sudo apt-get install kmod linux-headers-5.4.0-80-gen
 \
 3) We create a text catalog calculator-2.ko with mkdir command\
 aika@aika-virtual-machine: $ mkdir -p ~/develop/kernel/calculator-2\
-\
+
 4) Then we upload the C code with the calculator there:\
 #include <linux/init.h>\
 #include <linux/module.h>\
